@@ -5,11 +5,52 @@
 }
 
 body {
+  background-image: linear-gradient(to bottom right, #185a9d, #43cea2);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Roboto", sans-serif;
-  flex-direction: column;
   height: 100vh;
   overflow: hidden;
+}
+
+.search {
+  position: relative;
+  height: 55px;
+}
+
+.search .input {
+  background-color: white;
+  font-size: 18px;
+  border: 0;
+  padding: 10px;
+  width: 50px;
+
+  height: 50px;
+  transition: width 0.3s ease;
+}
+
+.btn {
+  background-color: white;
+  font-size: 24px;
+  cursor: pointer;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+}
+.search.active .btn {
+  transform: translateX(198px);
 }
